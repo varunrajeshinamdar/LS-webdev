@@ -1,0 +1,151 @@
+body{
+    margin: 80px;
+    background-color: rgb(221, 244, 247);
+}
+
+h1{
+    font-size: 70px;
+    color:red;
+    margin:0;
+    text-align:center;
+    letter-spacing: 2px;
+    line-height: 0.9;
+    text-shadow: 2px 2px 12px orange;
+}
+
+#ul{                             /*nos dont work for ids*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+        position:sticky;
+        top:0;
+    font-size: 20px;
+}
+
+#l{
+    float:left;
+    border-right: 2px solid white;    
+}
+
+#a{
+    display:block;
+    text-align: center;
+        padding-top:20px;
+        padding-bottom: 20px;
+        padding-left: 100px;
+        padding-right: 100px;
+    color: white;
+    text-decoration: none;
+}
+
+#l a:hover{
+    background-color: brown;
+    text-decoration: underline;
+}
+
+h2{
+    font-size: 40px;
+    text-decoration: underline;
+    color: blue;
+}
+
+.container{
+    display: flex;
+    align-items: center; */
+    padding :20px;
+    flex-wrap: wrap;
+}
+.text {
+    font-size: 30px;
+    flex: 1;
+    margin: 20px; /* Space between text and image */
+}
+.img{
+    margin-left:50px;
+    border: 10px solid rgb(134, 232, 134);
+    max-width: 100%; /* Ensures image scales with container */
+    height: auto; /* Maintains aspect ratio */
+}
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack text and image vertically */
+        text-align: center; /* Center-align text for better readability */
+    }
+    .text {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 20px; /* Add bottom margin for spacing */
+    }
+    .image {
+        width: 100%; /* Ensure image takes full width */
+    }
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    gap: 15px;
+}
+.footer-links a{        /* footer-links li{} doesnt work*/
+    color:white;
+}
+
+
+
+.quiz-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: #d0cbcb;
+    text-align: center;
+}
+
+#choices {
+    text-align: left;
+    margin-top: 10px;
+}
+
+#submitBtn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#results {
+    margin-top: 20px;
+    font-weight: bold;
+}
