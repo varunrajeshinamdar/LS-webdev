@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Posts</h2>
+<ul>
+    {% for post in posts %}
+    <li>
+        <p>{{ post.user.username }}: {{ post.content }}</p>
+        {% if post.media %}
+        <img src="{{ post.media.url }}" alt="Post media">
+        {% endif %}
+        {% if post.user == request.user %}
+        <a href="{% url 'edit_post' post.id %}">Edit</a>
+        <a href="{% url 'delete_post' post.id %}">Delete</a>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
